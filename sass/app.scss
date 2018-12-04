@@ -1,0 +1,16 @@
+$primary-color: #252934;
+*{
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* HEADER */
+#particles-js {
+  background: $primary-color;
+  height: 100vh;
+}
