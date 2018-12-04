@@ -94,3 +94,63 @@ body {
     }
   }
 }
+
+/*ABOUT*/
+
+.about {
+  padding: 0 12px;
+  color: darken($text-color, 50%);
+
+
+  h3 {
+    text-align: center;
+    color: $primary-color;
+    font-size: 2.1rem;
+  }
+
+  .about-intro {
+    line-height: 1.5em;
+  }
+}
+
+/* ICONS SECTION */
+.about-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .icon {
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+
+    h4 {
+      font-size: 1.1rem;
+      margin: 10px 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .skills,
+  .responsive,
+  .modern,
+  .dynamic {
+    background: $secondary-color;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 10px;
+
+
+    i {
+      font-size: 3rem;
+      color: $primary-color;
+    }
+  }
+}
