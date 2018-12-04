@@ -29,7 +29,11 @@ body {
     border: 2px solid #f1f1f1;
     color: #f1f1f1;
     padding: 10px 12px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-top: 15px;
     text-transform: uppercase;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all 0.2s ease-in; }
+    .intro button:hover {
+      background: #4DCCBD;
+      border-color: #4DCCBD; }
