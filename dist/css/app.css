@@ -37,3 +37,36 @@ body {
     .intro button:hover {
       background: #4DCCBD;
       border-color: #4DCCBD; }
+
+/*NAVIGATION*/
+.navigation {
+  background-color: #1a1d25;
+  padding: 10px 12px;
+  position: relative;
+  border-bottom: 3px solid #4DCCBD; }
+  .navigation button {
+    background: transparent;
+    border: none;
+    padding: 0 15px 0 0; }
+    .navigation button .fa-bars {
+      color: #f1f1f1;
+      font-size: 2.2rem; }
+  .navigation .nav-list {
+    color: #f1f1f1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    /*important when using absolute position*/
+    top: 103%;
+    /* to position it under the navigation */
+    background-color: #21242e;
+    padding: 0 12px;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-out; }
+    .navigation .nav-list li {
+      padding: 15px 0; }

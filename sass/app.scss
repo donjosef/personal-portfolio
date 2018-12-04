@@ -54,3 +54,43 @@ body {
     }
   }
 }
+
+/*NAVIGATION*/
+.navigation {
+  background-color: darken($primary-color, 5%);
+  padding: 10px 12px;
+  position: relative;
+  border-bottom: 3px solid $secondary-color;
+
+  button {
+    background: transparent;
+    border: none;
+    padding: 0 15px 0 0;
+
+    .fa-bars {
+      color: $text-color;
+      font-size: 2.2rem;
+    }
+  }
+
+  .nav-list {
+    color: $text-color;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%; /*important when using absolute position*/
+    top: 103%; /* to position it under the navigation */
+    background-color: darken($primary-color, 2%);
+    padding: 0 12px;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+
+    li {
+      padding: 15px 0;
+    }
+  }
+}
