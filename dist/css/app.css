@@ -82,6 +82,13 @@ body {
     font-size: 2.1rem; }
   .about .about-intro {
     line-height: 1.5em; }
+  .about .img-container {
+    width: 200px;
+    margin: 0 auto; }
+    .about .img-container img {
+      width: 100%;
+      box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+      border-radius: 10px; }
 
 /* ICONS SECTION */
 .about-icons {
