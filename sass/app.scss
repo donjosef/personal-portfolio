@@ -1,4 +1,7 @@
 $primary-color: #252934;
+$highlight-color: #F14F41;
+$text-color: #f1f1f1;
+
 *{
   box-sizing: border-box;
 }
@@ -13,4 +16,34 @@ body {
 #particles-js {
   background: $primary-color;
   height: 100vh;
+}
+
+.intro {
+  width: 90%;
+  margin: auto;
+  font-size: 1.7rem;
+  color: $text-color;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+
+  p {
+    margin: 0;
+
+    .highlight {
+      color: $highlight-color;
+    }
+  }
+
+  button {
+    background-color: transparent;
+    border: 2px solid $text-color;
+    color: $text-color;
+    padding: 10px 12px;
+    font-size: 1rem;
+    margin-top: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
 }

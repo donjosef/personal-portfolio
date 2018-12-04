@@ -10,3 +10,26 @@ body {
 #particles-js {
   background: #252934;
   height: 100vh; }
+
+.intro {
+  width: 90%;
+  margin: auto;
+  font-size: 1.7rem;
+  color: #f1f1f1;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0; }
+  .intro p {
+    margin: 0; }
+    .intro p .highlight {
+      color: #F14F41; }
+  .intro button {
+    background-color: transparent;
+    border: 2px solid #f1f1f1;
+    color: #f1f1f1;
+    padding: 10px 12px;
+    font-size: 1rem;
+    margin-top: 15px;
+    text-transform: uppercase;
+    cursor: pointer; }
