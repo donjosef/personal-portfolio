@@ -13,3 +13,27 @@ function toggleNav() {
     navList.style.height = navList.scrollHeight + 'px';
   }
 }
+
+/*Bars Animation*/
+const skillsList = document.getElementById('skills-list');
+const bars = document.querySelectorAll('.bar');
+const skillsValues = [
+  {val: 90},
+  {val: 80},
+  {val: 80},
+  {val: 70},
+  {val: 50},
+  {val: 40},
+  {val: 50}
+];
+
+function animateBars() {
+  const topOfList = skillsList.getBoundingClientRect().top;
+  /* When scroll pass the half of skills list */
+  if(topOfList < ( window.innerHeight - (skillsList.offsetHeight / 2)) ) {
+    bars.forEach((bar, ind) => bar.style.width = skillsValues[ind].val + '%');
+    window.removeEventListener('scroll', animateBars);
+  }
+}
+
+window.addEventListener('scroll', animateBars);
