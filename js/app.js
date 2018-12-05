@@ -44,5 +44,19 @@ window.addEventListener('scroll', animateBars);
 
 /* MixItUp library for animating projects grid */
 
-var containerEl = document.querySelector('.container');
-var mixer = mixitup(containerEl);
+const containerEl = document.querySelector('.container');
+const mixer = mixitup(containerEl);
+
+/* Animate highlighter of projects controls */
+const highlighter = document.querySelector('.highlighter');
+const controls = document.querySelector('.controls');
+
+function animateHighlighter(e) {
+  if(e.target.tagName == 'BUTTON') {
+    const btnCoords = e.target.getBoundingClientRect();
+
+    highlighter.style.width = btnCoords.width + 'px';
+    highlighter.style.transform = `translateX(${btnCoords.left}px)`;
+  }
+}
+controls.addEventListener('click', animateHighlighter);
