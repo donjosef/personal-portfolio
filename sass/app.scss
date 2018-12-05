@@ -226,12 +226,23 @@ body {
 
   .controls {
     text-align: center;
+    position: relative;
 
+  .highlighter {
+    position: absolute;
+    transition: all 0.3s;
+    background-color: $secondary-color;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+  }
     button {
-      background: $highlight-color;
+      background: transparent;
       padding: 10px 15px;
       border: none;
-      color: $text-color;
+      font-size: 1rem;
+      cursor: pointer;
+      color: darken($text-color, 25%);
       font-family: 'Montserrat', sans-serif;
     }
   }
