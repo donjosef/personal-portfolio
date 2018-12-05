@@ -41,3 +41,8 @@ function animateBars() {
 }
 
 window.addEventListener('scroll', animateBars);
+
+/* MixItUp library for animating projects grid */
+
+var containerEl = document.querySelector('.container');
+var mixer = mixitup(containerEl);
