@@ -122,3 +122,29 @@ body {
     .about-icons .dynamic i {
       font-size: 3rem;
       color: #252934; }
+
+/* SKILLS BARS */
+.skills-list {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0 20px; }
+  .skills-list li {
+    display: flex;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    font-size: 0.8rem; }
+    .skills-list li .label {
+      width: 80px;
+      padding: 3px 0;
+      background-color: #4DCCBD;
+      text-align: center;
+      color: #f1f1f1; }
+    .skills-list li .bar-container {
+      width: calc(100% - 80px);
+      position: relative;
+      background-color: #cbcbcb; }
+  .skills-list .bar {
+    background-color: #2e9f92;
+    transition: all 0.8s;
+    height: 100%;
+    width: 0; }

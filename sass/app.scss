@@ -167,3 +167,42 @@ body {
     }
   }
 }
+
+
+/* SKILLS BARS */
+
+.skills-list {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0 20px;
+
+  li {
+    display: flex;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+
+    .label {
+      width: 80px;
+      padding: 3px 0;
+      background-color: $secondary-color;
+      text-align: center;
+      color: $text-color;
+    }
+
+    .bar-container {
+      width: calc(100% - 80px);
+      position: relative;
+      background-color: darken($text-color, 15%);
+    }
+  }
+
+  .bar {
+    background-color: darken($secondary-color, 15%);
+    transition: all 0.8s;
+    height: 100%;
+    width: 0;
+  }
+
+  
+}
