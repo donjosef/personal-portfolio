@@ -17,6 +17,7 @@ function toggleNav() {
 /*Bars Animation*/
 const skillsList = document.getElementById('skills-list');
 const bars = document.querySelectorAll('.bar');
+const percentages = document.querySelectorAll('.value');
 const skillsValues = [
   {val: 90},
   {val: 80},
@@ -31,7 +32,10 @@ function animateBars() {
   const topOfList = skillsList.getBoundingClientRect().top;
   /* When scroll pass the half of skills list */
   if(topOfList < ( window.innerHeight - (skillsList.offsetHeight / 2)) ) {
-    bars.forEach((bar, ind) => bar.style.width = skillsValues[ind].val + '%');
+    bars.forEach((bar, ind) => {
+      bar.style.width = skillsValues[ind].val + '%';
+      percentages[ind].textContent = skillsValues[ind].val + '%';
+    });
     window.removeEventListener('scroll', animateBars);
   }
 }
