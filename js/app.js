@@ -14,6 +14,18 @@ function toggleNav() {
   }
 }
 
+/*Close nav-list */
+const navList = document.getElementById('nav-list');
+navList.addEventListener('click', closeNav);
+
+function closeNav(e) {
+    if(e.target.tagName == 'A') {
+      navList.style.height = null;
+    }
+}
+
+
+
 /* fix mobile bar */
 const nav = document.querySelector('.navigation');
 const topOfNav = nav.offsetTop;
