@@ -44,7 +44,12 @@ body {
   background-color: #1a1d25;
   padding: 10px 12px;
   position: relative;
+  width: 100%;
+  top: 0;
   border-bottom: 3px solid #4DCCBD; }
+  .navigation.fixed {
+    position: fixed;
+    z-index: 2; }
   .navigation button {
     background: transparent;
     border: none;

@@ -14,6 +14,22 @@ function toggleNav() {
   }
 }
 
+/* fix mobile bar */
+const nav = document.querySelector('.navigation');
+const topOfNav = nav.offsetTop;
+
+function fixNav() {
+  if(window.scrollY > topOfNav) {
+    document.body.style.paddingTop = nav.offsetHeight + "px";
+    nav.classList.add('fixed');
+  } else {
+    document.body.style.paddingTop = "0";
+    nav.classList.remove('fixed');
+  }
+}
+window.addEventListener('scroll', fixNav);
+
+
 /*Bars Animation*/
 const skillsList = document.getElementById('skills-list');
 const bars = document.querySelectorAll('.bar');
