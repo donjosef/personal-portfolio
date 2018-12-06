@@ -5,7 +5,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth; }
 
 /* HEADER */
 #particles-js {
@@ -25,17 +26,18 @@ body {
     margin: 0; }
     .intro p .highlight {
       color: #F14F41; }
-  .intro button {
+  .intro a {
     background-color: transparent;
     border: 2px solid #f1f1f1;
-    color: #f1f1f1;
-    padding: 10px 12px;
-    font-size: 0.9rem;
     margin-top: 15px;
     text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.2s ease-in; }
-    .intro button:hover {
+    transition: all 0.2s ease-in;
+    color: #f1f1f1;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 12px; }
+    .intro a:hover {
       background: #4DCCBD;
       border-color: #4DCCBD; }
 
