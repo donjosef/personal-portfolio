@@ -1,3 +1,4 @@
+/* Global styles */
 * {
   box-sizing: border-box; }
 
@@ -7,6 +8,14 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth; }
+
+h3 {
+  text-align: center;
+  color: #252934;
+  font-size: 2.1rem; }
+
+.highlight {
+  color: #F14F41; }
 
 /* HEADER */
 #particles-js {
@@ -24,8 +33,6 @@ body {
   right: 0; }
   .intro p {
     margin: 0; }
-    .intro p .highlight {
-      color: #F14F41; }
   .intro a {
     background-color: transparent;
     border: 2px solid #f1f1f1;
@@ -86,10 +93,6 @@ body {
 .about {
   padding: 0 12px;
   color: #727272; }
-  .about h3 {
-    text-align: center;
-    color: #252934;
-    font-size: 2.1rem; }
   .about .about-intro {
     line-height: 1.5em; }
   .about .img-container {
@@ -167,10 +170,6 @@ body {
 /* PROJECTS */
 .projects {
   padding-top: 20px; }
-  .projects h3 {
-    text-align: center;
-    color: #252934;
-    font-size: 2.1rem; }
   .projects .controls {
     text-align: center;
     position: relative; }
@@ -194,3 +193,45 @@ body {
     .projects .container img {
       width: 100%;
       display: block; }
+
+/* FOOTER */
+.contact {
+  background: #1a1d25;
+  padding: 40px 0;
+  flex-wrap: wrap;
+  text-align: center; }
+  .contact h3 {
+    color: #f1f1f1;
+    margin-bottom: 0; }
+  .contact h4 {
+    color: #4DCCBD;
+    font-size: 0.7rem;
+    margin-bottom: 25px; }
+  .contact .icons {
+    width: 330px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly; }
+  .contact .icon {
+    width: 50px;
+    height: 50px;
+    background: #21242e;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.2s; }
+    .contact .icon:hover {
+      transform: scale(0.9);
+      box-shadow: 0 0 3px rgba(77, 204, 189, 0.5); }
+    .contact .icon a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f1f1f1;
+      height: 100%;
+      width: 100%; }
+  .contact p {
+    width: 100%;
+    margin: 30px 0 0;
+    color: #bebebe; }
