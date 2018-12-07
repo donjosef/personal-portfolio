@@ -291,4 +291,13 @@ h3 {
     position: static;
     height: 100%;
     display: flex;
-    justify-content: space-evenly; } }
+    justify-content: space-evenly; }
+  .about .about-intro,
+  .about .about-passion,
+  .about .about-icons,
+  .about .skills-list {
+    width: 540px;
+    margin: 20px auto; }
+  .projects .container {
+    width: 500px;
+    margin: 20px auto; } }
