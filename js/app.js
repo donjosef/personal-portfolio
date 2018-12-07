@@ -78,8 +78,10 @@ const mixer = mixitup(containerEl);
 /* Animate highlighter of projects controls */
 const highlighter = document.querySelector('.highlighter');
 const controls = document.querySelector('.controls');
+let activeButton;
 
 function animateHighlighter(e) {
+  activeButton = e.target;
   if(e.target.tagName == 'BUTTON') {
     const btnCoords = e.target.getBoundingClientRect();
 
@@ -87,4 +89,12 @@ function animateHighlighter(e) {
     highlighter.style.transform = `translateX(${btnCoords.left}px)`;
   }
 }
+
+function repaintHighlighter() {
+  if(activeButton) {
+    const btnCoords = activeButton.getBoundingClientRect();
+    highlighter.style.transform = `translateX(${btnCoords.left}px)`;
+  }
+}
 controls.addEventListener('click', animateHighlighter);
+window.addEventListener('resize', repaintHighlighter);
