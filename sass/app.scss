@@ -400,8 +400,6 @@ h3 {
     }
   }
 
-  .about {
-
     .about-intro,
     .about-passion,
     .about-icons,
@@ -410,26 +408,40 @@ h3 {
       margin: 20px auto;
     }
 
-
-  }
-
   .projects .container {
     width: 500px;
     margin: 20px auto;
   }
 
   @media screen and (min-width: 780px) {
+    .about-intro-wrapper {
+      display: flex;
+      width: 780px;
+      margin: 50px auto;
+    }
+
+    .about-passion {
+      width: 90%;
+      text-align: center;
+    }
+    .about-icons {
+      width: 90%;
+
+      .icon {
+        width: 25%;
+      }
+    }
     .projects .controls button {
       font-size: 1.2rem;
     }
-    
+
     .projects .container {
       width: 90%;
       display: flex;
       flex-wrap: wrap;
 
       .mix {
-        width: 50%;
+        width: 50%; /*Create a 2 column layout*/
       }
 
       img {
@@ -437,20 +449,5 @@ h3 {
       }
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

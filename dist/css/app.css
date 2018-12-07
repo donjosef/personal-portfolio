@@ -288,10 +288,10 @@ h3 {
     height: 100%;
     display: flex;
     justify-content: space-evenly; }
-  .about .about-intro,
-  .about .about-passion,
-  .about .about-icons,
-  .about .skills-list {
+  .about-intro,
+  .about-passion,
+  .about-icons,
+  .skills-list {
     width: 540px;
     margin: 20px auto; }
   .projects .container {
@@ -299,6 +299,17 @@ h3 {
     margin: 20px auto; } }
 
 @media screen and (min-width: 580px) and (min-width: 780px) {
+  .about-intro-wrapper {
+    display: flex;
+    width: 780px;
+    margin: 50px auto; }
+  .about-passion {
+    width: 90%;
+    text-align: center; }
+  .about-icons {
+    width: 90%; }
+    .about-icons .icon {
+      width: 25%; }
   .projects .controls button {
     font-size: 1.2rem; }
   .projects .container {
@@ -306,6 +317,7 @@ h3 {
     display: flex;
     flex-wrap: wrap; }
     .projects .container .mix {
-      width: 50%; }
+      width: 50%;
+      /*Create a 2 column layout*/ }
     .projects .container img {
       height: 100%; } }
