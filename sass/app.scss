@@ -429,6 +429,14 @@ h3 {
 
       .icon {
         width: 25%;
+        opacity: 0;
+        transform: scale(0.9);
+        transition: all 0.3s ease-out;
+
+        &.show {
+          opacity: 1;
+          transform: scale(1);
+        }
       }
     }
     .projects .controls button {
@@ -450,4 +458,12 @@ h3 {
     }
   }
 
+}
+
+/*Loop for animating about icons*/
+
+@for $i from 1 through 4 {
+  .icon:nth-child(#{$i}) {
+    transition-delay: $i * 0.25s;
+  }
 }

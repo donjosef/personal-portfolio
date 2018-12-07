@@ -309,7 +309,13 @@ h3 {
   .about-icons {
     width: 90%; }
     .about-icons .icon {
-      width: 25%; }
+      width: 25%;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 0.3s ease-out; }
+      .about-icons .icon.show {
+        opacity: 1;
+        transform: scale(1); }
   .projects .controls button {
     font-size: 1.2rem; }
   .projects .container {
@@ -321,3 +327,16 @@ h3 {
       /*Create a 2 column layout*/ }
     .projects .container img {
       height: 100%; } }
+
+/*Loop for animating about icons*/
+.icon:nth-child(1) {
+  transition-delay: 0.25s; }
+
+.icon:nth-child(2) {
+  transition-delay: 0.5s; }
+
+.icon:nth-child(3) {
+  transition-delay: 0.75s; }
+
+.icon:nth-child(4) {
+  transition-delay: 1s; }
