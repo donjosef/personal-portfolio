@@ -42,7 +42,9 @@ function fixNav() {
 window.addEventListener('scroll', fixNav);
 
 
-/*Bars Animation*/
+/*Icons & Bars Animation*/
+const iconsContainer = document.querySelector('.about-icons');
+const icons = document.querySelectorAll('.icon');
 const skillsList = document.getElementById('skills-list');
 const bars = document.querySelectorAll('.bar');
 const percentages = document.querySelectorAll('.value');
@@ -56,19 +58,25 @@ const skillsValues = [
   {val: 50}
 ];
 
-function animateBars() {
-  const topOfList = skillsList.getBoundingClientRect().top;
-  /* When scroll pass the half of skills list */
-  if(topOfList < ( window.innerHeight - (skillsList.offsetHeight / 2)) ) {
-    bars.forEach((bar, ind) => {
-      bar.style.width = skillsValues[ind].val + '%';
-      percentages[ind].textContent = skillsValues[ind].val + '%';
-    });
-    window.removeEventListener('scroll', animateBars);
-  }
-}
+window.addEventListener('scroll', function scrollListener() {
+    const topOfIconsContainer = iconsContainer.getBoundingClientRect().top;
+    /* When scroll pass the half of icons container */
+    if(topOfIconsContainer < ( window.innerHeight - (iconsContainer.offsetHeight / 2)) ) {
+      icons.forEach(icon => icon.classList.add('show'));
+    }
+    const topOfList = skillsList.getBoundingClientRect().top;
+    /* When scroll pass the half of skills list */
+    if(topOfList < ( window.innerHeight - (skillsList.offsetHeight / 2)) ) {
+      bars.forEach((bar, ind) => {
+        bar.style.width = skillsValues[ind].val + '%';
+        bar.style.transitionDelay = ind * '0.1' + 's';
+        percentages[ind].textContent = skillsValues[ind].val + '%';
+      });
 
-window.addEventListener('scroll', animateBars);
+      /*Remove listener since it doesnt need anymore*/
+      window.removeEventListener('scroll', scrollListener);
+    }
+});
 
 /* MixItUp library for animating projects grid */
 
