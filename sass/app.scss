@@ -382,3 +382,12 @@ h3 {
     color: darken($text-color, 20%);
   }
 }
+
+
+/*-- MEDIA QUERIES --*/
+@media screen and (min-width: 580px) {
+  .intro {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
