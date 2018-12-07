@@ -468,7 +468,7 @@ h3 {
 /*Loop for animating about icons*/
 
 @for $i from 1 through 4 {
-  .icon:nth-child(#{$i}) {
+  .about-icons .icon:nth-child(#{$i}) {
     transition-delay: $i * 0.25s;
   }
 }
