@@ -301,7 +301,7 @@ h3 {
 @media screen and (min-width: 580px) and (min-width: 780px) {
   .about-intro-wrapper {
     display: flex;
-    width: 780px;
+    width: 760px;
     margin: 50px auto; }
   .about-passion {
     width: 90%;
