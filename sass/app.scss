@@ -44,6 +44,11 @@ h3 {
 
   p {
     margin: 0;
+
+    .highlight {
+      border-right: 1px solid $text-color;
+      animation: flash 0.6s infinite;
+    }
   }
 
   a {
@@ -481,5 +486,15 @@ h3 {
 @for $i from 1 through 4 {
   .about-icons .icon:nth-child(#{$i}) {
     transition-delay: $i * 0.25s;
+  }
+}
+
+/*animate border of my name */
+@keyframes flash {
+  from {
+    border-right-color: transparent;
+  }
+  to {
+    border-right-color: $text-color;
   }
 }
