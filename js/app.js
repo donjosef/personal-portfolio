@@ -48,6 +48,8 @@ const icons = document.querySelectorAll('.icon');
 const skillsList = document.getElementById('skills-list');
 const bars = document.querySelectorAll('.bar');
 const percentages = document.querySelectorAll('.value');
+const projContainer = document.querySelector('.projects .container');
+const projects = document.querySelectorAll('.mix');
 const skillsValues = [
   {val: 90},
   {val: 80},
@@ -72,7 +74,14 @@ window.addEventListener('scroll', function scrollListener() {
         bar.style.transitionDelay = ind * '0.1' + 's';
         percentages[ind].textContent = skillsValues[ind].val + '%';
       });
+    }
 
+    const topOfProj = projContainer.getBoundingClientRect().top;
+    if(topOfProj <= window.innerHeight / 2) {
+      projects.forEach((proj, ind) => {
+        proj.classList.add('show');
+        proj.style.transitionDelay = ind * 0.25 + 's';
+      });
       /*Remove listener since it doesnt need anymore*/
       window.removeEventListener('scroll', scrollListener);
     }

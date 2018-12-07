@@ -453,6 +453,14 @@ h3 {
 
       .mix {
         width: 50%; /*Create a 2 column layout*/
+        transform: translateY(50%);
+        opacity: 0;
+        transition: all 0.3s ease-out;
+
+        &.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       img {

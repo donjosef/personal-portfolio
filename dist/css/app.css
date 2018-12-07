@@ -327,7 +327,13 @@ h3 {
     flex-wrap: wrap; }
     .projects .container .mix {
       width: 50%;
-      /*Create a 2 column layout*/ }
+      /*Create a 2 column layout*/
+      transform: translateY(50%);
+      opacity: 0;
+      transition: all 0.3s ease-out; }
+      .projects .container .mix.show {
+        opacity: 1;
+        transform: translateY(0); }
     .projects .container img {
       height: 100%; } }
 
