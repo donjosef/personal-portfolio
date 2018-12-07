@@ -328,6 +328,10 @@ h3 {
     .projects .container img {
       height: 100%; } }
 
+@media screen and (min-width: 1150px) {
+  .projects .container .mix {
+    width: 33%; } }
+
 /*Loop for animating about icons*/
 .icon:nth-child(1) {
   transition-delay: 0.25s; }

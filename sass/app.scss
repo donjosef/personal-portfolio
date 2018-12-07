@@ -457,7 +457,12 @@ h3 {
       }
     }
   }
+}
 
+@media screen and (min-width: 1150px) {
+  .projects .container .mix {
+    width: 33%;
+  }
 }
 
 /*Loop for animating about icons*/
