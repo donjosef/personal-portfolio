@@ -87,7 +87,10 @@ h3 {
       color: #f1f1f1;
       display: block;
       height: 100%;
-      padding: 15px 0; }
+      padding: 15px 0;
+      transition: color 0.3s; }
+      .navigation .nav-list a:hover {
+        color: #F14F41; }
 
 /*ABOUT*/
 .about {

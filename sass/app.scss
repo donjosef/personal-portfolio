@@ -111,6 +111,9 @@ h3 {
       display: block;
       height: 100%;
       padding: 15px 0;
+      transition: color 0.3s;
+
+      &:hover {color: $highlight-color;}
     }
   }
 }
