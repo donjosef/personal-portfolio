@@ -297,3 +297,15 @@ h3 {
   .projects .container {
     width: 500px;
     margin: 20px auto; } }
+
+@media screen and (min-width: 580px) and (min-width: 780px) {
+  .projects .controls button {
+    font-size: 1.2rem; }
+  .projects .container {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap; }
+    .projects .container .mix {
+      width: 50%; }
+    .projects .container img {
+      height: 100%; } }

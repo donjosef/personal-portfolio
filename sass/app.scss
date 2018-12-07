@@ -418,7 +418,25 @@ h3 {
     margin: 20px auto;
   }
 
+  @media screen and (min-width: 780px) {
+    .projects .controls button {
+      font-size: 1.2rem;
+    }
+    
+    .projects .container {
+      width: 90%;
+      display: flex;
+      flex-wrap: wrap;
 
+      .mix {
+        width: 50%;
+      }
+
+      img {
+        height: 100%;
+      }
+    }
+  }
 
 
 
