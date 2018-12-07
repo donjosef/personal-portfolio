@@ -284,4 +284,11 @@ h3 {
 @media screen and (min-width: 580px) {
   .intro {
     text-align: center;
-    font-size: 2.5rem; } }
+    font-size: 2.5rem; }
+  .navigation button {
+    display: none; }
+  .navigation .nav-list {
+    position: static;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly; } }
