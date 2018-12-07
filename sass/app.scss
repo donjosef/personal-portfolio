@@ -263,6 +263,65 @@ h3 {
     }
   }
 
+  .mix {
+    position: relative;
+    min-height: 280px; /* important for layer otherwise buttons will be hidden*/
+  }
+
+  .layer {
+    text-align: center;
+    background: #fff;
+    color: $primary-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.39s;
+
+    &:hover {
+      opacity: 1
+    }
+
+    h4 {
+      text-align: center;
+      transform: translateY(-200%);
+      transition: all 0.3s ease-out;
+    }
+
+    strong {
+      margin-left: 10px;
+      transform: translateY(-200%);
+      transition: all 0.3s ease-out;
+      display: block;
+    }
+
+    ul {
+      text-align: left;
+      transform: translateX(-100%);
+      transition: all 0.4s ease-out;
+    }
+
+    a {
+      display: inline-block;
+      padding: 10px 15px;
+      border: 2px solid $highlight-color;
+      color: $highlight-color;
+      text-decoration: none;
+      transition: all 0.3s ease-out;
+      transform: translateY(200%);
+    }
+
+    &:hover ul {
+      transform: translateX(0);
+    }
+    &:hover a,
+    &:hover h4,
+    &:hover strong {
+      transform: translateY(0);
+    }
+  }
 }
 
 

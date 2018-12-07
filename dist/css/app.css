@@ -193,6 +193,50 @@ h3 {
     .projects .container img {
       width: 100%;
       display: block; }
+  .projects .mix {
+    position: relative;
+    min-height: 280px;
+    /* important for layer otherwise buttons will be hidden*/ }
+  .projects .layer {
+    text-align: center;
+    background: #fff;
+    color: #252934;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.39s; }
+    .projects .layer:hover {
+      opacity: 1; }
+    .projects .layer h4 {
+      text-align: center;
+      transform: translateY(-200%);
+      transition: all 0.3s ease-out; }
+    .projects .layer strong {
+      margin-left: 10px;
+      transform: translateY(-200%);
+      transition: all 0.3s ease-out;
+      display: block; }
+    .projects .layer ul {
+      text-align: left;
+      transform: translateX(-100%);
+      transition: all 0.4s ease-out; }
+    .projects .layer a {
+      display: inline-block;
+      padding: 10px 15px;
+      border: 2px solid #F14F41;
+      color: #F14F41;
+      text-decoration: none;
+      transition: all 0.3s ease-out;
+      transform: translateY(200%); }
+    .projects .layer:hover ul {
+      transform: translateX(0); }
+    .projects .layer:hover a,
+    .projects .layer:hover h4,
+    .projects .layer:hover strong {
+      transform: translateY(0); }
 
 /* FOOTER */
 .contact {
