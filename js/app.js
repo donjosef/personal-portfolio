@@ -120,6 +120,7 @@ window.addEventListener('scroll', function scrollListener() {
     if(topOfProj <= window.innerHeight / 2) {
       projects.forEach((proj, ind) => {
         proj.classList.add('show');
+        proj.style.transition = 'all 0.3s ease-out';
         proj.style.transitionDelay = ind * 0.25 + 's';
       });
       /*Remove listener since it doesnt need anymore*/
