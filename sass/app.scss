@@ -464,6 +464,11 @@ h3 {
     margin: 20px auto;
   }
 
+  .contact .contact-form {
+    width: 540px;
+  }
+}
+
   @media screen and (min-width: 780px) {
     .about-intro-wrapper {
       display: flex;
@@ -515,7 +520,7 @@ h3 {
       }
     }
   }
-}
+
 
 @media screen and (min-width: 1150px) {
   .projects .container .mix {
