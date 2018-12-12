@@ -249,6 +249,37 @@ h3 {
   .contact h3 {
     color: #f1f1f1;
     margin-bottom: 0; }
+  .contact .contact-form {
+    width: 90%;
+    margin: 30px auto; }
+  .contact input,
+  .contact textarea {
+    display: block; }
+  .contact input[type="text"],
+  .contact input[type="email"],
+  .contact textarea {
+    width: 100%;
+    background-color: #252934;
+    font-size: 1.1rem;
+    color: #f1f1f1;
+    padding: 0.5em;
+    outline: none;
+    border: none; }
+  .contact input[type="text"],
+  .contact input[type="email"] {
+    border-bottom: 2px solid #4DCCBD; }
+  .contact input[type="submit"] {
+    margin: 10px auto;
+    background: transparent;
+    color: #f1f1f1;
+    border: 2px solid #f1f1f1;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s; }
+    .contact input[type="submit"]:hover {
+      background-color: #4DCCBD;
+      border-color: #4DCCBD; }
   .contact h4 {
     color: #4DCCBD;
     font-size: 0.7rem;
