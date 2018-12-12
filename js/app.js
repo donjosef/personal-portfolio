@@ -156,3 +156,9 @@ function repaintHighlighter() {
 }
 controls.addEventListener('click', animateHighlighter);
 window.addEventListener('resize', repaintHighlighter);
+
+/*When user submit the form, before redirect happens, reset the form. */
+window.addEventListener('beforeunload', () => {
+    const contactForm = document.querySelector('.contact-form');
+    contactForm.reset();
+});
