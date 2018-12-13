@@ -127,7 +127,6 @@ window.addEventListener('scroll', function scrollListener() {
 
     const form = document.querySelector('.contact-form');
     const topOfForm = form.getBoundingClientRect().top;
-    console.log(topOfForm)
     if(topOfForm <= window.innerHeight / 1.2) {
       form.classList.add('show');
       /*Remove listener since it doesnt need anymore*/
@@ -163,6 +162,14 @@ function repaintHighlighter() {
 }
 controls.addEventListener('click', animateHighlighter);
 window.addEventListener('resize', repaintHighlighter);
+
+/*Display loader on submit*/
+document.querySelector('.contact-form').addEventListener('submit', (e) => {
+  const btn = document.querySelector('input[type="submit"]');
+  const loader = document.querySelector('.lds-ellipsis');
+  btn.style.display = 'none';
+  loader.style.display = 'inline-block';
+});
 
 /*When user submit the form, before redirect happens, reset the form. */
 window.addEventListener('beforeunload', () => {
