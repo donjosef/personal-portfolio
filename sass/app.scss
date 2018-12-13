@@ -466,6 +466,13 @@ h3 {
 
   .contact .contact-form {
     width: 540px;
+    opacity: 0;
+    transform: scale(0);
+    transition-timing-function: ease-in-out;
+
+    &.show {
+      animation: formScale 0.6s forwards;
+    }
   }
 }
 
@@ -543,5 +550,33 @@ h3 {
   }
   to {
     border-right-color: $text-color;
+  }
+}
+
+/*Animation for contact form*/
+@keyframes formScale {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scaleX(1);
+  }
+
+  70% {
+   opacity: 0.8;
+   transform: scaleX(1.06);
+  }
+
+  85% {
+   opacity: 0.9;
+   transform: scaleX(1.07);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
   }
 }

@@ -335,7 +335,12 @@ h3 {
     width: 500px;
     margin: 20px auto; }
   .contact .contact-form {
-    width: 540px; } }
+    width: 540px;
+    opacity: 0;
+    transform: scale(0);
+    transition-timing-function: ease-in-out; }
+    .contact .contact-form.show {
+      animation: formScale 0.6s forwards; } }
 
 @media screen and (min-width: 780px) {
   .about-intro-wrapper {
@@ -395,3 +400,21 @@ h3 {
     border-right-color: transparent; }
   to {
     border-right-color: #f1f1f1; } }
+
+/*Animation for contact form*/
+@keyframes formScale {
+  0% {
+    opacity: 0;
+    transform: scaleX(0); }
+  50% {
+    opacity: 0.6;
+    transform: scaleX(1); }
+  70% {
+    opacity: 0.8;
+    transform: scaleX(1.06); }
+  85% {
+    opacity: 0.9;
+    transform: scaleX(1.07); }
+  100% {
+    opacity: 1;
+    transform: scaleX(1); } }

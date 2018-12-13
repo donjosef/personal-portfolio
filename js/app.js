@@ -123,6 +123,13 @@ window.addEventListener('scroll', function scrollListener() {
         proj.style.transition = 'all 0.3s ease-out';
         proj.style.transitionDelay = ind * 0.25 + 's';
       });
+    }
+
+    const form = document.querySelector('.contact-form');
+    const topOfForm = form.getBoundingClientRect().top;
+    console.log(topOfForm)
+    if(topOfForm <= window.innerHeight / 1.2) {
+      form.classList.add('show');
       /*Remove listener since it doesnt need anymore*/
       window.removeEventListener('scroll', scrollListener);
     }
