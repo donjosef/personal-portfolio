@@ -104,7 +104,11 @@ h3 {
   padding: 0 12px;
   color: #727272; }
   .about .about-intro {
-    line-height: 1.5em; }
+    line-height: 1.7em; }
+    .about .about-intro a {
+      color: #F14F41;
+      text-decoration: none;
+      text-transform: uppercase; }
   .about .img-container {
     width: 200px;
     margin: 0 auto; }
@@ -350,8 +354,15 @@ h3 {
 @media screen and (min-width: 780px) {
   .about-intro-wrapper {
     display: flex;
-    width: 760px;
+    justify-content: space-around;
+    width: 90%;
     margin: 50px auto; }
+    .about-intro-wrapper .img-container {
+      width: 27%; }
+    .about-intro-wrapper .about-intro {
+      width: 65%;
+      margin-top: 0;
+      font-size: 1.2rem; }
   .about-passion {
     width: 90%;
     text-align: center; }
