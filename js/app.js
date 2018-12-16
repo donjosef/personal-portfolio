@@ -34,8 +34,13 @@ const TypeWriter = (function() {
 
 }());
 
-/*Invoke module TypeWriter after a little bit window loads*/
-setTimeout(() => TypeWriter.init(), 400);
+/*After intro is shown smoothly with transition, invoke typer function*/
+document.addEventListener('DOMContentLoaded', () => {
+  const intro = document.querySelector('header .intro');
+  intro.classList.add('show');
+
+  intro.addEventListener('transitionend', () => TypeWriter.init());
+});
 
 
 /* Load particles-js */

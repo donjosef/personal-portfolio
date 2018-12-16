@@ -41,6 +41,12 @@ h3 {
   top: 40%;
   left: 0;
   right: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+
+  &.show {
+    opacity: 1;
+  }
 
   p {
     margin: 0;
