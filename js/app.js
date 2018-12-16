@@ -39,7 +39,11 @@ window.addEventListener('load', () => {
   const intro = document.querySelector('header .intro');
   intro.classList.add('show');
 
-  intro.addEventListener('transitionend', () => TypeWriter.init());
+  intro.addEventListener('transitionend', (e) => {
+    if(e.target === intro) {
+      TypeWriter.init();
+    }
+  });
 });
 
 
