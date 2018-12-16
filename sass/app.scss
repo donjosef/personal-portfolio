@@ -28,7 +28,11 @@ h3 {
 
 /* HEADER */
 #particles-js {
-  background: $primary-color;
+  background: linear-gradient(rgba(37, 41, 52, 0.8), rgba(37, 41, 52, 0.8)), url(https://images.pexels.com/photos/156787/pexels-photo-156787.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
 }
 
