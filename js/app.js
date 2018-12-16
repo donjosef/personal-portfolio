@@ -35,7 +35,7 @@ const TypeWriter = (function() {
 }());
 
 /*After intro is shown smoothly with transition, invoke typer function*/
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
   const intro = document.querySelector('header .intro');
   intro.classList.add('show');
 
