@@ -108,7 +108,7 @@ const skillsValues = [
 window.addEventListener('scroll', function scrollListener() {
     const topOfIconsContainer = iconsContainer.getBoundingClientRect().top;
     /* When scroll pass the half of icons container */
-    if(topOfIconsContainer < ( window.innerHeight - (iconsContainer.offsetHeight / 2)) ) {
+    if(topOfIconsContainer < ( window.innerHeight - (iconsContainer.offsetHeight / 1.5)) ) {
       icons.forEach(icon => icon.classList.add('show'));
     }
     const topOfList = skillsList.getBoundingClientRect().top;
