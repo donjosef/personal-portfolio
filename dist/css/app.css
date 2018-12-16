@@ -297,10 +297,10 @@ h3 {
     font-size: 1.3rem;
     cursor: pointer;
     border-radius: 12px;
-    transition: all 0.2s; }
+    transition: all 0.3s; }
     .contact .icon:hover {
-      transform: scale(0.9);
-      box-shadow: 0 0 3px rgba(77, 204, 189, 0.5); }
+      transform: scale(0.95);
+      background: #4DCCBD; }
     .contact .icon a {
       text-decoration: none;
       display: flex;
