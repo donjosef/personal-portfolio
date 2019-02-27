@@ -205,7 +205,8 @@ h3 {
 .indicators {
   display: flex;
   justify-content: center;
-  list-style: none; }
+  list-style: none;
+  padding: 0; }
   .indicators li {
     margin: 10px; }
   .indicators .indicator {
