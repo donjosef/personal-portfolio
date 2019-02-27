@@ -185,6 +185,40 @@ h3 {
     top: 3px;
     color: #3f3f3f; }
 
+/*CAROUSEL SECTION*/
+.certifications {
+  padding-top: 20px; }
+
+.carousel {
+  width: 500px;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden; }
+  .carousel .carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out; }
+    .carousel .carousel-item img {
+      width: 100%; }
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  list-style: none; }
+  .indicators li {
+    margin: 10px; }
+  .indicators .indicator {
+    width: 10px;
+    height: 10px;
+    background: #252934;
+    border: none;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5; }
+    .indicators .indicator.active {
+      opacity: 1; }
+
 /* PROJECTS */
 .projects {
   padding-top: 20px;
@@ -248,9 +282,7 @@ h3 {
       text-decoration: none;
       transition: all 0.3s ease-out;
       transform: translateY(200%); }
-    .projects .layer:hover a,
-    .projects .layer:hover h4,
-    .projects .layer:hover strong {
+    .projects .layer:hover a, .projects .layer:hover h4, .projects .layer:hover strong {
       transform: translateY(0); }
 
 /* FOOTER */
@@ -331,6 +363,7 @@ h3 {
   .intro {
     text-align: center;
     font-size: 2.5rem; }
+
   .navigation button {
     display: none; }
   .navigation .nav-list {
@@ -338,15 +371,18 @@ h3 {
     height: 100%;
     display: flex;
     justify-content: space-evenly; }
+
   .about-intro,
   .about-passion,
   .about-icons,
   .skills-list {
     width: 540px;
     margin: 20px auto; }
+
   .projects .container {
     width: 500px;
     margin: 20px auto; }
+
   .contact .contact-form {
     width: 540px;
     opacity: 0;
@@ -354,7 +390,6 @@ h3 {
     transition-timing-function: ease-in-out; }
     .contact .contact-form.show {
       animation: formScale 0.6s forwards; } }
-
 @media screen and (min-width: 780px) {
   .about-intro-wrapper {
     display: flex;
@@ -367,9 +402,11 @@ h3 {
       width: 65%;
       margin-top: 0;
       font-size: 1.2rem; }
+
   .about-passion {
     width: 90%;
     text-align: center; }
+
   .about-icons {
     width: 90%; }
     .about-icons .icon {
@@ -380,8 +417,10 @@ h3 {
       .about-icons .icon.show {
         opacity: 1;
         transform: scale(1); }
+
   .projects .controls button {
     font-size: 1.2rem; }
+
   .projects .container {
     width: 90%;
     display: flex;
@@ -396,11 +435,9 @@ h3 {
         transform: translateY(0); }
     .projects .container img {
       height: 100%; } }
-
 @media screen and (min-width: 1150px) {
   .projects .container .mix {
     width: 33%; } }
-
 /*SPINNER*/
 .lds-ellipsis {
   display: none;
@@ -438,19 +475,16 @@ h3 {
     transform: scale(0); }
   100% {
     transform: scale(1); } }
-
 @keyframes lds-ellipsis3 {
   0% {
     transform: scale(1); }
   100% {
     transform: scale(0); } }
-
 @keyframes lds-ellipsis2 {
   0% {
     transform: translate(0, 0); }
   100% {
     transform: translate(19px, 0); } }
-
 /*Loop for animating about icons*/
 .about-icons .icon:nth-child(1) {
   transition-delay: 0.25s; }
@@ -470,7 +504,6 @@ h3 {
     border-right-color: transparent; }
   to {
     border-right-color: #f1f1f1; } }
-
 /*Animation for contact form*/
 @keyframes formScale {
   0% {
@@ -488,3 +521,5 @@ h3 {
   100% {
     opacity: 1;
     transform: scaleX(1); } }
+
+/*# sourceMappingURL=app.css.map */
