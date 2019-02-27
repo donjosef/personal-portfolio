@@ -147,33 +147,33 @@ window.addEventListener('scroll', function scrollListener() {
 
 const indicators = document.querySelectorAll('.indicator');
 
+indicators.forEach(indicator => indicator.addEventListener('click', (e) => {
+  moveCarousel(e);
+  activeIndicator(e);
+}));
+
 function moveCarousel(e) {
   const carousel_items = document.querySelectorAll('.carousel-item');
   const indicator = e.target;
 
   if(indicator.dataset.indicator === 'fcc') {
-    carousel_items.forEach(item => item.style.transform = `translateX(0%)`);
+    carousel_items.forEach(item => item.style.transform = 'translateX(0)');
   }
+
   if(indicator.dataset.indicator === 'udacity') {
-    carousel_items.forEach(item => item.style.transform = `translateX(-100%)`);
+    carousel_items.forEach(item => item.style.transform = 'translateX(-100%)');
   }
 }
 
-function activeIndicator() {
+function activeIndicator(e) {
   indicators.forEach(indicator => {
-    if(indicator.classList.contains('active')) {
-      indicator.classList.remove('active')
-    } else {
+    if(indicator.classList.contains('active') && indicator !== e.target) {
+      indicator.classList.remove('active');
+    } else if(!indicator.classList.contains('active') && indicator == e.target) {
       indicator.classList.add('active');
     }
   });
 }
-
-indicators.forEach(indicator => indicator.addEventListener('click', (e) => {
-  moveCarousel(e);
-  activeIndicator();
-}));
-
 
 /* MixItUp library for animating projects grid */
 
