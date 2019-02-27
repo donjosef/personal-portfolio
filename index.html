@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="dist/css/app.css">
   <title>Giuseppe Montanaro Portfolio</title>
 </head>
+
 <body>
 
   <header id="particles-js">
@@ -38,12 +41,17 @@
         </div>
         <p class="about-intro">
           In programming and web development i've found a deep passion. <br>
-          My journey as self-taught started more than one year ago. Im always been interested in constant learning, so i've decided to begin because i felt a need to grow and, also, build something cool! I enjoy building things from scratch and see how everything comes together. I graduated from udacity nanodegree and now my current focus is to improve in React and Redux, always with the goal to become a better developer. I would love to hear about <a href="#contact">you</a> and your projects and see if we can collaborate on something exciting.</p>
-      </div>
-        <hr>
-        <p class="about-passion">
-          I have a serious passion for UI effects, handling the logic of an app and creating dynamic user experiences.
+          My journey as self-taught started more than one year ago. Im always been interested in constant learning, so
+          i've decided to begin because i felt a need to grow and, also, build something cool! I enjoy building things
+          from scratch and see how everything comes together. I graduated from udacity nanodegree and now my current
+          focus is to improve in React and Redux, always with the goal to become a better developer. I would love to
+          hear about <a href="#contact">you</a> and your projects and see if we can collaborate on something exciting.
         </p>
+      </div>
+      <hr>
+      <p class="about-passion">
+        I have a serious passion for UI effects, handling the logic of an app and creating dynamic user experiences.
+      </p>
       </p>
       <div class="about-icons">
 
@@ -135,6 +143,28 @@
       </ul>
     </section>
 
+    <section id="certifications" class="certifications">
+      <h3>CERTIFICATIONS</h3>
+      <div class="carousel">
+        <a 
+          id="fcc"
+          class="carousel-item" 
+          href="https://www.freecodecamp.org/certification/giumont/front-end-libraries">
+          <img src="images/fcc.png">
+        </a>
+        <a 
+          id="udacity"
+          class="carousel-item" 
+          href="https://graduation.udacity.com/nd001">
+          <img src="images/cert.jpg">
+        </a>
+      </div>
+      <ul class="indicators">
+        <li><input type="button" class="indicator active" data-indicator="fcc"></li>
+        <li><input type="button" class="indicator" data-indicator="udacity"></li>
+      </ul>
+    </section>
+
     <section id="projects" class="projects">
       <h3>PROJECTS</h3>
       <div class="controls">
@@ -161,20 +191,20 @@
         </div>
 
         <div class="mix react">
-            <div class="layer">
-              <h4>Github best repos</h4>
-              <strong>Highlights</strong>
-              <ul class="highlights">
-                <li>Makes use of github API</li>
-                <li>Makes use of React Router</li>
-                <li>Makes use of marked package</li>
-                <li>Totally responsive thanks to css grid</li>
-              </ul>
-              <a href="https://github.com/donjosef/github-best-repos" target="_blank">View Code</a>
-              <a href="https://donjosef.github.io/github-best-repos/" target="_blank">View Demo</a>
-            </div>
-            <img src="images/github.png" alt="github best repos">
+          <div class="layer">
+            <h4>Github best repos</h4>
+            <strong>Highlights</strong>
+            <ul class="highlights">
+              <li>Makes use of github API</li>
+              <li>Makes use of React Router</li>
+              <li>Makes use of marked package</li>
+              <li>Totally responsive thanks to css grid</li>
+            </ul>
+            <a href="https://github.com/donjosef/github-best-repos" target="_blank">View Code</a>
+            <a href="https://donjosef.github.io/github-best-repos/" target="_blank">View Demo</a>
           </div>
+          <img src="images/github.png" alt="github best repos">
+        </div>
 
         <div class="mix react">
           <div class="layer">
@@ -320,7 +350,12 @@
       <input type="email" name="email" required="true" placeholder="Your email">
       <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
       <input type="text" name="_gotcha" style="display:none">
-      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+      <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
       <input type="submit" value="Send">
     </form>
     <h4>If you want to know more about me</h4>
@@ -349,4 +384,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
   <script src="js/app.js"></script>
 </body>
+
 </html>
