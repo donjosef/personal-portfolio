@@ -263,6 +263,7 @@ h3 {
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
+  user-select: none;
 
   .carousel-item {
     min-width: 100%;
