@@ -1,36 +1,36 @@
-const TypeWriter = (function() {
+const TypeWriter = (function () {
 
-    const dom = {};
-    let text = '';
-    let time = 160;
+  const dom = {};
+  let text = '';
+  let time = 160;
 
-    function getDomElements() {
-        dom.myName = document.querySelector('.intro .highlight');
+  function getDomElements() {
+    dom.myName = document.querySelector('.intro .highlight');
+  }
+
+  function type() {
+    const name = dom.myName.dataset.name;
+    text = name.substr(0, text.length + 1);
+
+    dom.myName.textContent = text;
+
+    if (text === name) {
+      return;
     }
 
-    function type() {
-        const name = dom.myName.dataset.name;
-        text = name.substr(0, text.length + 1);
+    setTimeout(() => {
+      type();
+    }, time);
+  }
 
-        dom.myName.textContent = text;
+  function init() {
+    getDomElements();
+    type();
+  }
 
-        if(text === name ) {
-          return;
-        }
-
-        setTimeout(() => {
-            type();
-        }, time);
-    }
-
-    function init() {
-       getDomElements();
-       type();
-    }
-
-    return {
-        init: init
-    }
+  return {
+    init: init
+  }
 
 }());
 
@@ -40,7 +40,7 @@ window.addEventListener('load', () => {
   intro.classList.add('show');
 
   intro.addEventListener('transitionend', (e) => {
-    if(e.target === intro) {
+    if (e.target === intro) {
       TypeWriter.init();
     }
   });
@@ -56,7 +56,7 @@ btn.addEventListener('click', toggleNav);
 
 function toggleNav() {
   const navList = document.getElementById('nav-list');
-  if(navList.style.height) {
+  if (navList.style.height) {
     navList.style.height = null;
   } else {
     navList.style.height = navList.scrollHeight + 'px';
@@ -68,9 +68,9 @@ const navList = document.getElementById('nav-list');
 navList.addEventListener('click', closeNav);
 
 function closeNav(e) {
-    if(e.target.tagName == 'A') {
-      navList.style.height = null;
-    }
+  if (e.target.tagName == 'A') {
+    navList.style.height = null;
+  }
 }
 
 
@@ -80,7 +80,7 @@ const nav = document.querySelector('.navigation');
 const topOfNav = nav.offsetTop;
 
 function fixNav() {
-  if(window.scrollY > topOfNav) {
+  if (window.scrollY > topOfNav) {
     document.body.style.paddingTop = nav.offsetHeight + "px";
     nav.classList.add('fixed');
   } else {
@@ -100,47 +100,47 @@ const percentages = document.querySelectorAll('.value');
 const projContainer = document.querySelector('.projects .container');
 const projects = document.querySelectorAll('.mix');
 const skillsValues = [
-  {val: 90},
-  {val: 80},
-  {val: 80},
-  {val: 70},
-  {val: 50},
-  {val: 40},
-  {val: 50}
+  { val: 90 },
+  { val: 80 },
+  { val: 80 },
+  { val: 70 },
+  { val: 50 },
+  { val: 40 },
+  { val: 50 }
 ];
 
 window.addEventListener('scroll', function scrollListener() {
-    const topOfIconsContainer = iconsContainer.getBoundingClientRect().top;
-    /* When scroll pass the half of icons container */
-    if(topOfIconsContainer < ( window.innerHeight - (iconsContainer.offsetHeight / 1.5)) ) {
-      icons.forEach(icon => icon.classList.add('show'));
-    }
-    const topOfList = skillsList.getBoundingClientRect().top;
-    /* When scroll pass the half of skills list */
-    if(topOfList < ( window.innerHeight - (skillsList.offsetHeight / 2)) ) {
-      bars.forEach((bar, ind) => {
-        bar.style.width = skillsValues[ind].val + '%';
-        bar.style.transitionDelay = ind * '0.1' + 's';
-        percentages[ind].textContent = skillsValues[ind].val + '%';
-      });
-    }
+  const topOfIconsContainer = iconsContainer.getBoundingClientRect().top;
+  /* When scroll pass the half of icons container */
+  if (topOfIconsContainer < (window.innerHeight - (iconsContainer.offsetHeight / 1.5))) {
+    icons.forEach(icon => icon.classList.add('show'));
+  }
+  const topOfList = skillsList.getBoundingClientRect().top;
+  /* When scroll pass the half of skills list */
+  if (topOfList < (window.innerHeight - (skillsList.offsetHeight / 2))) {
+    bars.forEach((bar, ind) => {
+      bar.style.width = skillsValues[ind].val + '%';
+      bar.style.transitionDelay = ind * '0.1' + 's';
+      percentages[ind].textContent = skillsValues[ind].val + '%';
+    });
+  }
 
-    const topOfProj = projContainer.getBoundingClientRect().top;
-    if(topOfProj <= window.innerHeight / 2) {
-      projects.forEach((proj, ind) => {
-        proj.classList.add('show');
-        proj.style.transition = 'all 0.3s ease-out';
-        proj.style.transitionDelay = ind * 0.25 + 's';
-      });
-    }
+  const topOfProj = projContainer.getBoundingClientRect().top;
+  if (topOfProj <= window.innerHeight / 2) {
+    projects.forEach((proj, ind) => {
+      proj.classList.add('show');
+      proj.style.transition = 'all 0.3s ease-out';
+      proj.style.transitionDelay = ind * 0.25 + 's';
+    });
+  }
 
-    const form = document.querySelector('.contact-form');
-    const topOfForm = form.getBoundingClientRect().top;
-    if(topOfForm <= window.innerHeight / 1.2) {
-      form.classList.add('show');
-      /*Remove listener since it doesnt need anymore*/
-      window.removeEventListener('scroll', scrollListener);
-    }
+  const form = document.querySelector('.contact-form');
+  const topOfForm = form.getBoundingClientRect().top;
+  if (topOfForm <= window.innerHeight / 1.2) {
+    form.classList.add('show');
+    /*Remove listener since it doesnt need anymore*/
+    window.removeEventListener('scroll', scrollListener);
+  }
 });
 
 /*Carousel Section*/
@@ -156,24 +156,56 @@ function moveCarousel(e) {
   const carousel_items = document.querySelectorAll('.carousel-item');
   const indicator = e.target;
 
-  if(indicator.dataset.indicator === 'fcc') {
+  if (indicator.dataset.indicator === 'fcc') {
     carousel_items.forEach(item => item.style.transform = 'translateX(0)');
   }
 
-  if(indicator.dataset.indicator === 'udacity') {
+  if (indicator.dataset.indicator === 'udacity') {
     carousel_items.forEach(item => item.style.transform = 'translateX(-100%)');
   }
 }
 
 function activeIndicator(e) {
   indicators.forEach(indicator => {
-    if(indicator.classList.contains('active') && indicator !== e.target) {
+    if (indicator.classList.contains('active') && indicator !== e.target) {
       indicator.classList.remove('active');
-    } else if(!indicator.classList.contains('active') && indicator == e.target) {
+    } else if (!indicator.classList.contains('active') && indicator == e.target) {
       indicator.classList.add('active');
     }
   });
 }
+
+/* Check if touch events are supported. If yes, bind events to carousel for moving it*/
+document.addEventListener('DOMContentLoaded', (e) => {
+  if ('ontouchstart' in window) {
+    const carousel = document.querySelector('.carousel');
+    let isDown = false;
+    let carouselScroll;
+    let startX;
+
+    carousel.addEventListener('touchstart', (e) => {
+      isDown = true;
+      startX = e.targetTouches[0].pageX - carousel.offsetLeft;
+      carouselScroll = carousel.scrollLeft;
+    });
+
+    carousel.addEventListener('touchmove', (e) => {
+      if (!isDown) return; //stop from executing mousemove
+      e.preventDefault();
+      const x = e.targetTouches[0].pageX - carousel.offsetLeft;
+      const walk = x - startX;
+      carousel.scrollLeft = carouselScroll - walk;
+    });
+
+    carousel.addEventListener('touchend', (e) => {
+      isDown = false;
+    });
+
+    carousel.addEventListener('touchleave', (e) => {
+      isDown = false;
+    });
+  }
+});
 
 /* MixItUp library for animating projects grid */
 
@@ -187,7 +219,7 @@ let activeButton;
 
 function animateHighlighter(e) {
   activeButton = e.target;
-  if(e.target.tagName == 'BUTTON') {
+  if (e.target.tagName == 'BUTTON') {
     const btnCoords = e.target.getBoundingClientRect();
 
     highlighter.style.width = btnCoords.width + 'px';
@@ -196,7 +228,7 @@ function animateHighlighter(e) {
 }
 
 function repaintHighlighter() {
-  if(activeButton) {
+  if (activeButton) {
     const btnCoords = activeButton.getBoundingClientRect();
     highlighter.style.transform = `translateX(${btnCoords.left}px)`;
   }
@@ -214,6 +246,6 @@ document.querySelector('.contact-form').addEventListener('submit', (e) => {
 
 /*When user submit the form, before redirect happens, reset the form. */
 window.addEventListener('beforeunload', () => {
-    const contactForm = document.querySelector('.contact-form');
-    contactForm.reset();
+  const contactForm = document.querySelector('.contact-form');
+  contactForm.reset();
 });
