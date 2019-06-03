@@ -1,4 +1,5 @@
-
+import { TypeWriter } from './TypeWriter.js';
+import { MobileNavigation } from './MobileNavigation.js';
 
 /*After intro is shown smoothly with transition, invoke typer function*/
 window.addEventListener('load', () => {
@@ -12,6 +13,7 @@ window.addEventListener('load', () => {
   });
 });
 
+MobileNavigation.init();
 
 /* Load particles-js */
 particlesJS.load('particles-js', 'assets/particles.json');
