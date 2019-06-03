@@ -16,31 +16,6 @@ window.addEventListener('load', () => {
 /* Load particles-js */
 particlesJS.load('particles-js', 'assets/particles.json');
 
-/* toggle navigation mobile */
-const btn = document.getElementById('toggle-nav');
-btn.addEventListener('click', toggleNav);
-
-function toggleNav() {
-  const navList = document.getElementById('nav-list');
-  if (navList.style.height) {
-    navList.style.height = null;
-  } else {
-    navList.style.height = navList.scrollHeight + 'px';
-  }
-}
-
-/*Close nav-list */
-const navList = document.getElementById('nav-list');
-navList.addEventListener('click', closeNav);
-
-function closeNav(e) {
-  if (e.target.tagName == 'A') {
-    navList.style.height = null;
-  }
-}
-
-
-
 /* fix mobile bar */
 const nav = document.querySelector('.navigation');
 const topOfNav = nav.offsetTop;
