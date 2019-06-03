@@ -1,5 +1,6 @@
 import { TypeWriter } from './TypeWriter.js';
 import { MobileNavigation } from './MobileNavigation.js';
+import { Scroll } from './Scroll.js';
 
 /*After intro is shown smoothly with transition, invoke typer function*/
 window.addEventListener('load', () => {
@@ -14,80 +15,12 @@ window.addEventListener('load', () => {
 });
 
 MobileNavigation.init();
+Scroll.init();
 
 /* Load particles-js */
 particlesJS.load('particles-js', 'assets/particles.json');
 
-/* fix mobile bar */
-const nav = document.querySelector('.navigation');
-const topOfNav = nav.offsetTop;
-
-function fixNav() {
-  if (window.scrollY > topOfNav) {
-    document.body.style.paddingTop = nav.offsetHeight + "px";
-    nav.classList.add('fixed');
-  } else {
-    document.body.style.paddingTop = "0";
-    nav.classList.remove('fixed');
-  }
-}
-window.addEventListener('scroll', fixNav);
-
-
-/*Icons & Bars Animation*/
-const iconsContainer = document.querySelector('.about-icons');
-const icons = document.querySelectorAll('.icon');
-const skillsList = document.getElementById('skills-list');
-const bars = document.querySelectorAll('.bar');
-const percentages = document.querySelectorAll('.value');
-const projContainer = document.querySelector('.projects .container');
-const projects = document.querySelectorAll('.mix');
-const skillsValues = [
-  { val: 90 },
-  { val: 80 },
-  { val: 80 },
-  { val: 70 },
-  { val: 50 },
-  { val: 40 },
-  { val: 50 }
-];
-
-window.addEventListener('scroll', function scrollListener() {
-  const topOfIconsContainer = iconsContainer.getBoundingClientRect().top;
-  /* When scroll pass the half of icons container */
-  if (topOfIconsContainer < (window.innerHeight - (iconsContainer.offsetHeight / 1.5))) {
-    icons.forEach(icon => icon.classList.add('show'));
-  }
-  const topOfList = skillsList.getBoundingClientRect().top;
-  /* When scroll pass the half of skills list */
-  if (topOfList < (window.innerHeight - (skillsList.offsetHeight / 2))) {
-    bars.forEach((bar, ind) => {
-      bar.style.width = skillsValues[ind].val + '%';
-      bar.style.transitionDelay = ind * '0.1' + 's';
-      percentages[ind].textContent = skillsValues[ind].val + '%';
-    });
-  }
-
-  const topOfProj = projContainer.getBoundingClientRect().top;
-  if (topOfProj <= window.innerHeight / 2) {
-    projects.forEach((proj, ind) => {
-      proj.classList.add('show');
-      proj.style.transition = 'all 0.3s ease-out';
-      proj.style.transitionDelay = ind * 0.25 + 's';
-    });
-  }
-
-  const form = document.querySelector('.contact-form');
-  const topOfForm = form.getBoundingClientRect().top;
-  if (topOfForm <= window.innerHeight / 1.2) {
-    form.classList.add('show');
-    /*Remove listener since it doesnt need anymore*/
-    window.removeEventListener('scroll', scrollListener);
-  }
-});
-
 /*Carousel Section*/
-
 const indicators = document.querySelectorAll('.indicator');
 
 indicators.forEach(indicator => indicator.addEventListener('click', (e) => {
