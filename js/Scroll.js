@@ -2,8 +2,9 @@ export const Scroll = (function () {
 
     function fixNav() {
         const nav = document.querySelector('.navigation');
-        const topOfNav = nav.offsetTop;
-        if (window.scrollY > topOfNav) {
+        const header = document.querySelector('header');
+        const headerHeight = header.offsetHeight;
+        if (window.scrollY > headerHeight) {
             document.body.style.paddingTop = nav.offsetHeight + "px";
             nav.classList.add('fixed');
         } else {
